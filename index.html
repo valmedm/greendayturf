@@ -262,72 +262,12 @@
       <div class="section-head reveal">
         <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Get In Touch</p>
         <h2>Tell us about your yard</h2>
-        <p class="section-sub">Fill out a few details and we'll follow up with a straightforward quote, or skip the form and call or text us directly.</p>
+        <p class="section-sub">Call or text us directly for a straightforward quote.</p>
       </div>
 
       <div class="contact-grid">
 
-        <div class="contact-form-card reveal">
-          <form action="https://formspree.io/f/meeypvwr" method="POST" id="contact-form" novalidate>
-            <input type="hidden" name="form-name" value="contact" />
-            <p class="visually-hidden">
-              <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
-            </p>
-
-            <div class="form-row">
-              <div class="form-field">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" autocomplete="name" required />
-                <span class="field-error" id="name-error"></span>
-              </div>
-              <div class="form-field">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="(___) ___-____" required />
-                <span class="field-error" id="phone-error"></span>
-              </div>
-            </div>
-
-            <div class="form-field">
-              <label for="service">Service needed</label>
-              <select id="service" name="service" required>
-                <option value="" selected disabled>Choose a service</option>
-                <option value="Lawn Mowing">Lawn Mowing</option>
-                <option value="Mulch Installation">Mulch Installation</option>
-                <option value="Tree Trimming">Tree Trimming</option>
-                <option value="Edging">Edging</option>
-                <option value="Fertilization">Fertilization</option>
-                <option value="Cement Work">Cement Work</option>
-                <option value="Leaf Removal">Leaf Removal</option>
-                <option value="Seed Implementation">Seed Implementation</option>
-                <option value="Not sure / General question">Not sure / General question</option>
-              </select>
-              <span class="field-error" id="service-error"></span>
-            </div>
-
-            <div class="form-field">
-              <label for="message">Message <span class="optional-tag">(optional)</span></label>
-              <textarea id="message" name="message" rows="4" placeholder="Yard size, what you need, timing..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block">
-              Get My Free Quote
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
-            </button>
-
-            <p class="form-fineprint">We usually respond within one business day. Need it faster? <a href="tel:+17045072192">Call</a> or <a href="sms:+17045072192">text</a> (704) 507-2192.</p>
-          </form>
-
-          <div class="form-success" id="form-success" hidden tabindex="-1">
-            <h3>Thanks, we've got it.</h3>
-            <p>Your request is in. We'll be in touch shortly. If it's urgent, call or text (704) 507-2192 anytime.</p>
-          </div>
-
-          <div class="form-error" id="form-error" hidden role="alert">
-            <p>Something went wrong sending your request. Please call or text us directly at <a href="tel:+17045072192">(704) 507-2192</a>.</p>
-          </div>
-        </div>
-
-        <aside class="contact-info-card reveal">
+        <aside class="contact-info-card reveal" style="grid-column: 1 / -1; max-width: 600px; margin: 0 auto; width: 100%;">
           <h3>Talk to us directly</h3>
           <a class="contact-phone" href="tel:+17045072192">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 4h3l1.6 4.3-2 1.7a13 13 0 0 0 6 6l1.7-2 4.2 1.6v3a1.6 1.6 0 0 1-1.7 1.6C10.8 19.8 4.2 13.2 4 5.7A1.6 1.6 0 0 1 5.5 4Z"/></svg>
@@ -365,7 +305,6 @@
       <p>One call gets you on the schedule. No pressure, no pushy sales pitch.</p>
       <div class="final-cta-buttons">
         <a class="btn btn-accent btn-lg" href="tel:+17045072192">Call (704) 507-2192</a>
-        <a class="btn btn-outline-light btn-lg" href="#contact">Get a Free Quote</a>
       </div>
     </div>
   </section>
@@ -417,10 +356,6 @@
   <a href="sms:+17045072192">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.1 7.5L4 20l1.1-4.8A8.4 8.4 0 1 1 21 11.5Z"/></svg>
     <span>Text</span>
-  </a>
-  <a href="#contact">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="2.2"/><path d="M9 8.5h6M9 12h6M9 15.5h4"/></svg>
-    <span>Quote</span>
   </a>
 </nav>
 
