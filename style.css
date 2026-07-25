@@ -197,7 +197,7 @@ h1, h2, h3 { font-family: var(--font-display); color: var(--color-text); font-we
 .logo-light { color: #fff; }
 .logo-light span { color: var(--sage-pale); }
 
-/* ---------- HEADER ---------- */
+/* ---------- HEADER & MOBILE NAV TOGGLE ---------- */
 .site-header {
   position: sticky;
   top: 0;
@@ -225,7 +225,37 @@ h1, h2, h3 { font-family: var(--font-display); color: var(--color-text); font-we
   color: var(--color-text-soft);
   transition: color 0.15s var(--ease);
 }
-.primary-nav a:hover { color: var(--color-text); }
+.primary-nav a:hover,
+.primary-nav a.active { color: var(--color-text); }
+
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-line);
+}
+.nav-toggle svg { width: 22px; height: 22px; }
+
+/* Mobile Menu Overlay Styles whenJS toggles .nav-open */
+body.nav-open {
+  overflow: hidden;
+}
+body.nav-open .primary-nav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--color-line);
+  box-shadow: var(--shadow-md);
+  gap: 1.25rem;
+}
 
 .header-call { padding: 0.6rem; }
 .header-call .call-text { display: none; }
@@ -236,7 +266,8 @@ h1, h2, h3 { font-family: var(--font-display); color: var(--color-text); font-we
 }
 
 @media (min-width: 768px) {
-  .primary-nav { display: flex; align-items: center; gap: 2.1rem; }
+  .nav-toggle { display: none; }
+  .primary-nav { display: flex; align-items: center; gap: 2.1rem; position: static; background: transparent; padding: 0; box-shadow: none; border: none; }
 }
 
 /* ---------- HERO ---------- */
@@ -434,6 +465,7 @@ h1, h2, h3 { font-family: var(--font-display); color: var(--color-text); font-we
 }
 .form-field textarea { resize: vertical; min-height: 100px; font-family: var(--font-body); }
 
+/* Form Error handling classes toggled by JavaScript */
 .form-field.has-error input,
 .form-field.has-error select,
 .form-field.has-error textarea {
